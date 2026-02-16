@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swipe · ultra modern</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- BACKGROUND MUSIC - NOW WITH AUTOPLAY -->
+    <audio id="backgroundMusic" loop preload="auto" autoplay>
+        <source src="music/background.mp3" type="audio/mpeg">
+        <source src="music/background.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- SCARY SOUND - PLAYS WHEN SCREAMER APPEARS -->
+    <audio id="scarySound" preload="auto">
+        <source src="sfx/scary.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- VIDEO BACKGROUND -->
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- scary black slide with GIF -->
+    <div class="black-slide-modern" id="blackSlideModern">
+        <img src="scary.gif" alt="scary" class="scary-img-modern" onerror="this.src='https://placehold.co/600x800/1e1b1e/ffffff?text=scary.gif'">
+    </div>
+
+    <!-- center message -->
+    <div class="center-message-modern" id="warningModern">
+        Mech laka darja Bakini Zabour
+    </div>
+
+    <!-- gif overlay (superlike) -->
+    <div class="gif-overlay-modern" id="gifModern">
+        <img src="super.gif" alt="super gif" onerror="this.src='https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXZkN2Iwd3p1ZzN6dHQ1YjR0b3YzaGxtdTVsZ3Y1dTltY2lxMnM3bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26u4lMvvG6oFoZ5S0/giphy.gif';">
+    </div>
+
+    <!-- main modern ui -->
+    <div class="modern-container">
+        <div class="card-stack" id="cardStackModern">
+            <div class="card" id="currentCardModern">
+                <img src="images/1.jpg" alt="friend" id="cardImgModern">
+            </div>
+            <div class="swipe-badge nope" id="nopeBadgeModern">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="swipe-badge like" id="likeBadgeModern">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+
+        <!-- Ultra modern action row with icons -->
+        <div class="actions-modern">
+            <button class="action-btn-modern nope-modern" id="nopeBtnModern">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="action-btn-modern super-modern" id="superBtnModern">
+                <i class="fas fa-star"></i>
+            </button>
+            <button class="action-btn-modern like-modern" id="likeBtnModern">
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
